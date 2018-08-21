@@ -1,0 +1,37 @@
+{
+  "name": "hackerbayservice",
+  "version": "1.0.0",
+  "description": "a simple stateless microservice ",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jidemobell/hackerbay-backend.git"
+  },
+  "author": "jide olaniyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jidemobell/hackerbay-backend/issues"
+  },
+  "homepage": "https://github.com/jidemobell/hackerbay-backend#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "fast-json-patch": "^2.0.6",
+    "jimp": "^0.3.5",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.9"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0"
+  }
+}
