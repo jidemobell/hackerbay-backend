@@ -108,6 +108,7 @@ sample request:
   { "op": "add", "path": "/hello", "value": ["world"] },
   { "op": "remove", "path": "/foo" }
 ]
+}
 ```
 
 The final route request contains a public image URL, the picture is downloaded and resized and saved to a local folder.
