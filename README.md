@@ -68,9 +68,9 @@ Add additional notes about how to deploy this on a live system -->
 
 ## Built With
 
-* [Express]
-* [mongodb]
-* [mocha]
+* [Express](http://expressjs.com)
+* [mongoose](https://mongoosejs.com)
+* [mocha](https://mochajs.org)
  
 ## Authors
 
