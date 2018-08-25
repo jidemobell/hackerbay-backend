@@ -2,39 +2,41 @@
 
 a simple stateless microservice in Nodejs, with three major functionalities -
 
-*Authentication
-*JSON patching
-*Image Thumbnail Generation
+* Authentication
+* JSON patching
+* Image Thumbnail 
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+npm install to ensure same packages are installed.
+To start the development server on localhost:3000 Type "npm start"
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+ it is required that you have node,npm and mongodb installed to successfully test this project 
 
-```
-Give examples
-```
+ npm install to ensure same packages are installed.
+ To start the development server on localhost:3000 Type "npm start"
+
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+clone the repo  
 
 ```
-until finished
+git clone https://github.com/jidemobell/hackerbay-backend.git
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+navigate into the root app folder and 
+
+```
+npm install
+```
+
+to run application
+
+```
+npm start
+```
 
 ## Running the tests
 
