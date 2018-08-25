@@ -14,7 +14,7 @@ To start the development server on localhost:3000 Type "npm start"
  it is required that you have node,npm and mongodb installed to successfully test this project 
 
  npm install to ensure same packages are installed.
- To start the development server on localhost:3000 Type "npm start"
+ To start the development server on localhost:4000 Type "npm start"
 
 
 ### Installing
@@ -47,11 +47,15 @@ npm test
 ```
 
 ### tesing endpoints
-use you favourite REST client (e.g Postman, Insomnia) to test all enpoints
+use you favourite REST client (e.g Postman, Insomnia) to test all routes
 
 This is a simple app and no tough authentication requirements. However we need
-to create a user to test the enpoints. The following endpoint helps to achieve this.
+to create a user to test protected enpoints. The following endpoint helps to achieve this.
 Pass username and password to route
+
+```
+ localhost:4000/singup
+```
 
 ```
 sample request:
@@ -61,25 +65,62 @@ sample request:
  }
 ```
 
-```
- localhost:3000/singup
-```
-
-For user authentication after succesful user creation 
 
 
-<!-- 
-### And coding style tests
-
-Explain what these tests test and why
+For user authentication after succesful user creation. this generate an authentication token
+that will be used to validate request at protected endpoints
 
 ```
-Give an example
+ localhost:4000/signin
 ```
 
-## Deployment
+```
+sample request:
+{
+	"email": "me@hackerbay.io",
+	"password": "password"
+ }
+```
+```
+sample response:
+{
+	"success": true,
+	"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Yjc5OGVmMDcyZDAxNTE5ZGM3MGRmNmUiLCJlbWFpbCI6Im1lQG1lLmNvbSIsImlhdCI6MTUzNDczMjY5MSwiZXhwIjoxNTM0ODE5MDkxfQ.eEAXrix6QkuCKQwI5fu5_bUb0_9rwok6eJLUd2j1PbA"
+}
+```
 
-Add additional notes about how to deploy this on a live system -->
+The following route accepts a JSON object and a JSON patch object and returns a patched json object  ( see: (http://jsonpatch.com/))
+
+```
+localhost:4000/jsonpatch
+```
+
+```
+sample request:
+
+{
+	"document": {
+  "baz": "qux",
+  "foo": "bar"
+},
+	"patch": [
+  { "op": "replace", "path": "/baz", "value": "boo" },
+  { "op": "add", "path": "/hello", "value": ["world"] },
+  { "op": "remove", "path": "/foo" }
+]
+```
+
+The final route request contains a public image URL, the picture is downloaded and resized and saved to a local folder.
+a URL query is passed to route. The example uses the public image at https://www.google.com/images/srpr/logo3w.png
+
+```
+localhost:4000/thumbnail
+```
+
+```
+sample request:
+http://localhost:4000/thumbnail?url=https://www.google.com/images/srpr/logo3w.png
+```
 
 ## Built With
 
