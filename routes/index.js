@@ -40,7 +40,7 @@ routes.post('/signin', (req, res) => {
 
 routes.patch('/jsonpatch', authenticate, (req, res) => {
   let doc = req.body.document;
-  const { patch } = req.body;
+  const patch = req.body.patch;
   doc = jsonpatch.applyPatch(doc, patch).newDocument;
   res.status(200).json({
     message: 'successfully patched',
@@ -56,7 +56,7 @@ routes.patch('/jsonpatch', authenticate, (req, res) => {
  */
 
 routes.get('/thumbnail', authenticate, (req, res) => {
-  const { url } = req.query.url;
+  const url = req.query.url;
   Jimp.read(url)
     .then((image) => {
       image.resize(50, 50)

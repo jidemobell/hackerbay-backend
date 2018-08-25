@@ -23,9 +23,7 @@ const authenticate = (req, res, next) => {
     }
     req.decoded = decoded;
     next();
-    return null;
   });
-  return null;
 };
 
 module.exports = authenticate;
