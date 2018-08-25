@@ -45,15 +45,30 @@ The app uses mocha/chai for testing
 ```
 npm test
 ```
+
+### tesing endpoints
+use you favourite REST client (e.g Postman, Insomnia) to test all enpoints
+
+This is a simple app and no tough authentication requirements. However we need
+to create a user to test the enpoints. The following endpoint helps to achieve this.
+Pass username and password to route
+
+```
+sample request:
+ {
+	"email": "me@hackerbay.io",
+	"password": "password"
+ }
+```
+
+```
+ localhost:3000/singup
+```
+
+For user authentication after succesful user creation 
+
+
 <!-- 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ### And coding style tests
 
 Explain what these tests test and why
