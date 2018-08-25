@@ -128,6 +128,14 @@ http://localhost:4000/thumbnail?url=https://www.google.com/images/srpr/logo3w.pn
 * [Express](http://expressjs.com)
 * [mongoose](https://mongoosejs.com)
 * [mocha](https://mochajs.org)
+
+##Docker
+
+a working image of the application can be pulled from dockerhub
+
+```
+docker pull jidemobell/hackerbayservice
+```
  
 ## Authors
 
