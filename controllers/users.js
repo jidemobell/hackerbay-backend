@@ -5,7 +5,7 @@ const User = require('../models/user');
 
 module.exports = {
   /**
-   * @param  {Object} data
+   * @param  {Object} data email and password key value pair
    */
   createUser(data) {
     return bcrypt.hash(data.password, 10)
@@ -18,7 +18,7 @@ module.exports = {
 
 
   /**
-   * @param  {Object} data
+   * @param  {Object} data email and password key value pair
    */
   login(data) {
     return User.findOne({ email: data.email })
